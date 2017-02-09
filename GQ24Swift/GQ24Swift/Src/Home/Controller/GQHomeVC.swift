@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYWebImage
 
 class GQHomeVC: UIViewController,UIScrollViewDelegate {
 
@@ -21,7 +22,6 @@ class GQHomeVC: UIViewController,UIScrollViewDelegate {
             
             guard var data = obj["data"] as? [NSDictionary] else{
                
-                
                 return;
             }
             

@@ -79,6 +79,7 @@
 		2E31D4F51E03FECC00567CE7 /* GQHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQHomeVC.xib; sourceTree = "<group>"; };
 		2E31D4FB1E03FF0C00567CE7 /* GQHomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQHomeViewCell.swift; sourceTree = "<group>"; };
 		2E31D4FC1E03FF0C00567CE7 /* GQHomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQHomeViewCell.xib; sourceTree = "<group>"; };
+		2E3906BF1E4C459D007FC32B /* MYGQBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYGQBridgeHeader.h; sourceTree = "<group>"; };
 		2E3D9D971DDABCFF0072B327 /* CNNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNNetWork.swift; sourceTree = "<group>"; };
 		2EBD86A41DE2F756009216A7 /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
 		76B0940611AD8DB890F0FAEB /* Pods_GQ24Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQ24Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +153,7 @@
 				2EBC59BB1DDC04140061D08B /* Src */,
 				2E13DC441DD9D3A000693380 /* AppDelegate.swift */,
 				2E13DC461DD9D3A000693380 /* ViewController.swift */,
+				2E3906BF1E4C459D007FC32B /* MYGQBridgeHeader.h */,
 				2E13DC481DD9D3A000693380 /* Main.storyboard */,
 				2E13DC4B1DD9D3A000693380 /* Assets.xcassets */,
 				2E13DC4D1DD9D3A000693380 /* LaunchScreen.storyboard */,
@@ -384,7 +386,7 @@
 			attributes = {
 				CLASSPREFIX = GQ;
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = condentast;
 				TargetAttributes = {
 					2E13DC401DD9D3A000693380 = {
@@ -624,6 +626,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = GQ24Swift/MYGQBridgeHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -667,6 +670,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = GQ24Swift/MYGQBridgeHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

@@ -32,8 +32,13 @@ extension GQHomeViewCell{
     
    public func configData(imgName: String){
         
-        imgView.image = UIImage(named: imgName)
+//    imgView.image = UIImage(named: imgName)
+    
+//    imageView?.yy_setImage(with: NSURL(string: "http://img3.selfimg.com.cn/activity1080/2016/12/15/1481811640_lAjFH9.jpg") as URL?, options: [.setImageWithFadeAnimation, .progressiveBlur])
+    
+    imageView?.yy_setImage(with: NSURL(string: "http://img3.selfimg.com.cn/activity1080/2016/12/15/1481811640_lAjFH9.jpg") as URL?, placeholder: nil, options: [.setImageWithFadeAnimation, .progressiveBlur], completion: { ( image,  url, form, stage, error) in
         
+    })
     }
     
     public func cellOnTableView(tableView: UITableView, didScrollView: UIView){
