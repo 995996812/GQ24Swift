@@ -8,12 +8,14 @@
 
 import UIKit
 import YYWebImage
+import SwiftyJSON
 
 class GQHomeVC: UIViewController,UIScrollViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var imgArr: [String] = ["1","2","3","4","5","6","7","8","9","10"]
+    var dataArr: [JSON] = [JSON]()
     // MARK: - 生命周期方法
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +26,15 @@ class GQHomeVC: UIViewController,UIScrollViewDelegate {
                
                 return;
             }
+            let json = JSON(data)
             
-            print(data)
-            
+            for i in 0...json.count - 1{
+    
+                self.dataArr.append(json[i])
+            }
+
+            print(self.dataArr.count)
+            self.tableView.reloadData()
         }, failed: {(error) in
             
             print(error)
@@ -64,14 +72,16 @@ extension GQHomeVC: UITableViewDataSource{
     // MARK: - 数据源 代理
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return imgArr.count
+        return self.dataArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GQHomeViewCell") as! GQHomeViewCell
         
-        cell.configData(imgName: imgArr[indexPath.row]);
+//        var json = self.dataArr[indexPath.row]
+      
+        cell.configData(json: self.dataArr[indexPath.row])
         
         return cell
     }

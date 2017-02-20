@@ -6,6 +6,7 @@ target 'GQ24Swift' do
 
 pod 'Alamofire', '~> 4.0'
 pod 'YYWebImage'
+pod 'SwiftyJSON'
 end
 
 post_install do |installer|

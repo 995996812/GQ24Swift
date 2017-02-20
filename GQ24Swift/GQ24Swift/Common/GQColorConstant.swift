@@ -12,6 +12,9 @@ let kColorTabBarSelected = UIColorRGB(rgbValue: 0xff6a00)
 let kColorTabBarNormal = UIColorRGB(rgbValue: 0xffffff)
 let kColorToClear = UIColor.clear
 
+let kScreenWidth = UIScreen.main.bounds.size.width
+let kScreenHeight = UIScreen.main.bounds.size.height
+
 func RGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
 
     return UIColor (red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)

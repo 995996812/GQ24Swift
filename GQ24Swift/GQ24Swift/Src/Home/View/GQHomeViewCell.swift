@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class GQHomeViewCell: UITableViewCell {
 
@@ -30,16 +31,18 @@ class GQHomeViewCell: UITableViewCell {
 
 extension GQHomeViewCell{
     
-   public func configData(imgName: String){
+   public func configData(json: JSON){
+
+    if let coverimg = json["datainfo"]["coverimg"].string{
         
-//    imgView.image = UIImage(named: imgName)
-    
-//    imageView?.yy_setImage(with: NSURL(string: "http://img3.selfimg.com.cn/activity1080/2016/12/15/1481811640_lAjFH9.jpg") as URL?, options: [.setImageWithFadeAnimation, .progressiveBlur])
-    
-    imageView?.yy_setImage(with: NSURL(string: "http://img3.selfimg.com.cn/activity1080/2016/12/15/1481811640_lAjFH9.jpg") as URL?, placeholder: nil, options: [.setImageWithFadeAnimation, .progressiveBlur], completion: { ( image,  url, form, stage, error) in
+        imgView?.yy_setImage(with: NSURL(string: coverimg) as URL?, placeholder: nil, options: [.setImageWithFadeAnimation, .progressiveBlur], completion: { ( image,  url, form, stage, error) in
+            
+        })
+    }else{
         
-    })
+        imgView.image = UIImage(named: "1")
     }
+}
     
     public func cellOnTableView(tableView: UITableView, didScrollView: UIView){
         //获取每个cell的位置(为了获取每个cell的Y值)
