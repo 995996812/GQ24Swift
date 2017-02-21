@@ -14,6 +14,9 @@
 		2E13DC4F1DD9D3A000693380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E13DC4D1DD9D3A000693380 /* LaunchScreen.storyboard */; };
 		2E13DC5A1DD9D3A000693380 /* GQ24SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13DC591DD9D3A000693380 /* GQ24SwiftTests.swift */; };
 		2E13DC651DD9D3A000693380 /* GQ24SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E13DC641DD9D3A000693380 /* GQ24SwiftUITests.swift */; };
+		2E2485971E5C1CC4004BC335 /* UIImage+GQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2485961E5C1CC4004BC335 /* UIImage+GQImage.m */; };
+		2E2485991E5C4118004BC335 /* GQHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2485981E5C4118004BC335 /* GQHomeModel.swift */; };
+		2E24859B1E5C4121004BC335 /* GQHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E24859A1E5C4121004BC335 /* GQHomeVM.swift */; };
 		2E2EC8801DE2CEAE0098E5C9 /* GQDiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC87E1DE2CEAE0098E5C9 /* GQDiscoverVC.swift */; };
 		2E2EC8811DE2CEAE0098E5C9 /* GQDiscoverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EC87F1DE2CEAE0098E5C9 /* GQDiscoverVC.xib */; };
 		2E2EC8841DE2CECB0098E5C9 /* GQHGQRUVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EC8821DE2CECB0098E5C9 /* GQHGQRUVC.swift */; };
@@ -65,6 +68,11 @@
 		2E13DC601DD9D3A000693380 /* GQ24SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQ24SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E13DC641DD9D3A000693380 /* GQ24SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQ24SwiftUITests.swift; sourceTree = "<group>"; };
 		2E13DC661DD9D3A000693380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2485941E5C1CC4004BC335 /* GQ24Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GQ24Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E2485951E5C1CC4004BC335 /* UIImage+GQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GQImage.h"; sourceTree = "<group>"; };
+		2E2485961E5C1CC4004BC335 /* UIImage+GQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GQImage.m"; sourceTree = "<group>"; };
+		2E2485981E5C4118004BC335 /* GQHomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQHomeModel.swift; sourceTree = "<group>"; };
+		2E24859A1E5C4121004BC335 /* GQHomeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQHomeVM.swift; sourceTree = "<group>"; };
 		2E2EC87E1DE2CEAE0098E5C9 /* GQDiscoverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQDiscoverVC.swift; sourceTree = "<group>"; };
 		2E2EC87F1DE2CEAE0098E5C9 /* GQDiscoverVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQDiscoverVC.xib; sourceTree = "<group>"; };
 		2E2EC8821DE2CECB0098E5C9 /* GQHGQRUVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQHGQRUVC.swift; sourceTree = "<group>"; };
@@ -79,7 +87,6 @@
 		2E31D4F51E03FECC00567CE7 /* GQHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQHomeVC.xib; sourceTree = "<group>"; };
 		2E31D4FB1E03FF0C00567CE7 /* GQHomeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GQHomeViewCell.swift; sourceTree = "<group>"; };
 		2E31D4FC1E03FF0C00567CE7 /* GQHomeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQHomeViewCell.xib; sourceTree = "<group>"; };
-		2E3906BF1E4C459D007FC32B /* MYGQBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYGQBridgeHeader.h; sourceTree = "<group>"; };
 		2E3D9D971DDABCFF0072B327 /* CNNetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNNetWork.swift; sourceTree = "<group>"; };
 		2EBD86A41DE2F756009216A7 /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
 		76B0940611AD8DB890F0FAEB /* Pods_GQ24Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GQ24Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,11 +160,13 @@
 				2EBC59BB1DDC04140061D08B /* Src */,
 				2E13DC441DD9D3A000693380 /* AppDelegate.swift */,
 				2E13DC461DD9D3A000693380 /* ViewController.swift */,
-				2E3906BF1E4C459D007FC32B /* MYGQBridgeHeader.h */,
+				2E2485951E5C1CC4004BC335 /* UIImage+GQImage.h */,
+				2E2485961E5C1CC4004BC335 /* UIImage+GQImage.m */,
 				2E13DC481DD9D3A000693380 /* Main.storyboard */,
 				2E13DC4B1DD9D3A000693380 /* Assets.xcassets */,
 				2E13DC4D1DD9D3A000693380 /* LaunchScreen.storyboard */,
 				2E13DC501DD9D3A000693380 /* Info.plist */,
+				2E2485941E5C1CC4004BC335 /* GQ24Swift-Bridging-Header.h */,
 			);
 			path = GQ24Swift;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 		2E31D4F61E03FECC00567CE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2E2485981E5C4118004BC335 /* GQHomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +252,7 @@
 		2E31D4F81E03FECC00567CE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2E24859A1E5C4121004BC335 /* GQHomeVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -392,6 +403,7 @@
 					2E13DC401DD9D3A000693380 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = BDPQKE9W28;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					2E13DC541DD9D3A000693380 = {
@@ -516,14 +528,17 @@
 				2E2EC8981DE2DAF10098E5C9 /* GQBaseTabBarController.swift in Sources */,
 				2E3D9D981DDABCFF0072B327 /* CNNetWork.swift in Sources */,
 				2E2EC89A1DE2DB240098E5C9 /* GQTabBarItem.swift in Sources */,
+				2E2485991E5C4118004BC335 /* GQHomeModel.swift in Sources */,
 				2E2EC88C1DE2CEE80098E5C9 /* GQMineVC.swift in Sources */,
 				2E2EC8841DE2CECB0098E5C9 /* GQHGQRUVC.swift in Sources */,
 				2E2EC89D1DE2E8900098E5C9 /* GQColorConstant.swift in Sources */,
 				2E2EC8971DE2DAF10098E5C9 /* GQBaseNavigationController.swift in Sources */,
+				2E2485971E5C1CC4004BC335 /* UIImage+GQImage.m in Sources */,
 				2E31D4F91E03FECC00567CE7 /* GQHomeVC.swift in Sources */,
 				2E2EC8801DE2CEAE0098E5C9 /* GQDiscoverVC.swift in Sources */,
 				2E13DC471DD9D3A000693380 /* ViewController.swift in Sources */,
 				2E31D4FD1E03FF0C00567CE7 /* GQHomeViewCell.swift in Sources */,
+				2E24859B1E5C4121004BC335 /* GQHomeVM.swift in Sources */,
 				2EBD86A51DE2F756009216A7 /* UIViewController+Nib.swift in Sources */,
 				2E13DC451DD9D3A000693380 /* AppDelegate.swift in Sources */,
 			);
@@ -683,12 +698,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BDPQKE9W28;
 				INFOPLIST_FILE = GQ24Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.condenast.GQ24Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GQ24Swift/GQ24Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -699,12 +717,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = BDPQKE9W28;
 				INFOPLIST_FILE = GQ24Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.condenast.GQ24Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GQ24Swift/GQ24Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

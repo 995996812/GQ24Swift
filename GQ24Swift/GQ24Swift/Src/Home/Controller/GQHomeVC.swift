@@ -22,7 +22,7 @@ class GQHomeVC: UIViewController,UIScrollViewDelegate {
         
         CNURLSessionRequest().senderGETRequest(url: "gq24/api40/getindexdata", success: {(obj) in
             
-            guard var data = obj["data"] as? [NSDictionary] else{
+            guard let data = obj["data"] as? [NSDictionary] else{
                
                 return;
             }
@@ -33,7 +33,7 @@ class GQHomeVC: UIViewController,UIScrollViewDelegate {
                 self.dataArr.append(json[i])
             }
 
-            print(self.dataArr.count)
+            print(json)
             self.tableView.reloadData()
         }, failed: {(error) in
             
@@ -54,7 +54,7 @@ class GQHomeVC: UIViewController,UIScrollViewDelegate {
 extension GQHomeVC{
     // MARK: - 私有方法
     func configTableView(){
-        tableView.rowHeight = 200;
+        tableView.rowHeight = 220;
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "GQHomeViewCell", bundle: nil), forCellReuseIdentifier: "GQHomeViewCell")
@@ -62,7 +62,6 @@ extension GQHomeVC{
 }
 
 extension GQHomeVC: UITableViewDataSource{
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -78,8 +77,6 @@ extension GQHomeVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "GQHomeViewCell") as! GQHomeViewCell
-        
-//        var json = self.dataArr[indexPath.row]
       
         cell.configData(json: self.dataArr[indexPath.row])
         
