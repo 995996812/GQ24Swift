@@ -33,9 +33,9 @@ extension CNRequestSender{
 
 struct CNURLSessionRequest: CNRequestSender{
     
-    func senderGETRequest(url: String, success: @escaping SuccessBlock, failed: @escaping ErrorBlock){
+    func senderGETRequest(url: String,params: [String: Any] , success: @escaping SuccessBlock, failed: @escaping ErrorBlock){
         
-        Alamofire.request(host + url,parameters: nil).responseJSON { (DataResponse) in
+        Alamofire.request(host + url,parameters: params).responseJSON { (DataResponse) in
             
             switch DataResponse.result{
             case .success:

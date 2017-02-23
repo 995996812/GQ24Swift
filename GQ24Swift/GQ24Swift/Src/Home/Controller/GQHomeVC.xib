@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,22 +20,71 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-wX-7qO">
-                    <rect key="frame" x="0.0" y="-20" width="375" height="687"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="um6-od-ANm"/>
                         <outlet property="delegate" destination="-1" id="5yZ-Uy-qZg"/>
                     </connections>
                 </tableView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70T-o7-OtI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UrE-Tu-CFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouw-fd-XRR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="K6w-nk-Fav">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Cn5-hG-5OW"/>
+                    </constraints>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gq_home_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-Xd-mhQ">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="O6e-GG-NNr"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cR0-ba-acK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ca1-ou-b6D"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ycu-wX-7qO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2cA-M1-kDb"/>
                 <constraint firstAttribute="bottom" secondItem="Ycu-wX-7qO" secondAttribute="bottom" id="8Ki-3f-nCS"/>
-                <constraint firstItem="Ycu-wX-7qO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-20" id="aAh-Rq-kSQ"/>
+                <constraint firstItem="Vap-Xd-mhQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="H6E-eX-m9p"/>
+                <constraint firstItem="Vap-Xd-mhQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q4C-rR-fNh"/>
+                <constraint firstItem="70T-o7-OtI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qzf-zK-arv"/>
+                <constraint firstItem="cR0-ba-acK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SBd-aQ-ftX"/>
+                <constraint firstItem="70T-o7-OtI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W1g-BY-tND"/>
+                <constraint firstItem="Ycu-wX-7qO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="aAh-Rq-kSQ"/>
+                <constraint firstAttribute="trailing" secondItem="Vap-Xd-mhQ" secondAttribute="trailing" id="bGm-nC-wFu"/>
+                <constraint firstItem="cR0-ba-acK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cIJ-MI-hGs"/>
+                <constraint firstAttribute="trailing" secondItem="70T-o7-OtI" secondAttribute="trailing" id="eSl-rz-7ai"/>
                 <constraint firstAttribute="trailing" secondItem="Ycu-wX-7qO" secondAttribute="trailing" id="kqC-Jq-pvl"/>
+                <constraint firstAttribute="trailing" secondItem="cR0-ba-acK" secondAttribute="trailing" id="ovY-Kb-ScC"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="33.5" y="66.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="gq_home_logo" width="87" height="22"/>
+    </resources>
 </document>

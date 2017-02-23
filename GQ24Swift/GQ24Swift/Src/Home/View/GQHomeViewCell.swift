@@ -27,14 +27,16 @@ class GQHomeViewCell: UITableViewCell {
 
 extension GQHomeViewCell{
     
-   public func configData(json: JSON){
+   public func configData(data: AnyObject){
     
     self.nameLabel.font = UIFont(name: "Helvetica-Bold", size: 22)
     self.storeName.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
     
-    if let coverimg = json["datainfo"]["coverimg"].string{
+    if (data.self).isKind(of: GQHomeModel.self) {
         
-        imgView?.yy_setImage(with: NSURL(string: coverimg) as URL?, placeholder: nil, options: [.setImageWithFadeAnimation, .progressiveBlur], completion: { ( image,  url, form, stage, error) in
+        let homeModel: GQHomeModel = data as! GQHomeModel
+        
+        imgView?.yy_setImage(with: NSURL(string: homeModel.coverimg) as URL?, placeholder: nil, options: [.setImageWithFadeAnimation, .progressiveBlur], completion: { ( image,  url, form, stage, error) in
             
             if (image != nil){
                 //用异步的方式运行队列里地任务
@@ -48,7 +50,7 @@ extension GQHomeViewCell{
                             
                             self.nameLabel.textColor = UIColor.red
                         }else{
-                           
+                            
                             self.nameLabel.textColor = UIColor.yellow
                         }
                     })
@@ -56,30 +58,20 @@ extension GQHomeViewCell{
             }
         })
         
+        storeName.setTitle(homeModel.colname, for: .normal)
+        storeName.isHidden = false;
+        
+        nameLabel.text = homeModel.title;
+        nameLabel.isHidden = false;
+        
     }else{
         
         imgView.image = UIImage(named: "1")
-    }
-    
-    if let colname = json["datainfo"]["colname"].string{
-        storeName.setTitle(colname, for: .normal)
-        storeName.isHidden = false;
-    }else{
         storeName.isHidden = true;
-    }
-    
-    if let title = json["datainfo"]["title"].string{
-        
-        nameLabel.text = title;
-        nameLabel.isHidden = false;
-    }else{
         nameLabel.isHidden = true;
     }
-    
-    
 }
-    
-    public func cellOnTableView(tableView: UITableView, didScrollView: UIView){
+      public func cellOnTableView(tableView: UITableView, didScrollView: UIView){
         //获取每个cell的位置(为了获取每个cell的Y值)
         let rect: CGRect = tableView.convert(self.frame, to: didScrollView)
         //获取每个可见cell距离中心点的值
